@@ -8,7 +8,6 @@ class CandidatesController < ApplicationController
   end
 
   def create
-    #names = params["name"]
     Candidate.create(name: params["name"], hometown: params["hometown"], district: params["district"], party: params["party"])
   end
 
