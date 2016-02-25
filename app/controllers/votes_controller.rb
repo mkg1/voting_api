@@ -1,6 +1,7 @@
 class VotesController < ApplicationController
   def create
-    v = Vote.create(voter_id: params[:voter_id], candidate_id: params[:candidate_id])
+    find_voter = Voter.find(params[:id])
+    v = Vote.create(voter_id: params[:voter_id], candidate_id: params[:candidate_id]) if find_voter.token = params[:token]
     render json: v
   end
 
