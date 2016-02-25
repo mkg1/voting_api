@@ -1,5 +1,6 @@
 class VotersController < ApplicationController
-  def index
+  def create
+    Voter.create(name: params[:name], party: params[:party], token: params[:token])
   end
 
   def show

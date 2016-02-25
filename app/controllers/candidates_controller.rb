@@ -4,6 +4,7 @@ class CandidatesController < ApplicationController
   end
 
   def show
+    # id = params["id"]
     render json: Candidate.first
   end
 
