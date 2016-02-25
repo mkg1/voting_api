@@ -7,7 +7,7 @@ class VotesControllerTest < ActionController::TestCase
   end
 
   test "should get destroy" do
-    get :destroy
+    get :destroy, id: votes(:one).id
     assert_response :success
   end
 

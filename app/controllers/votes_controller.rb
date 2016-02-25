@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
   def create
-    v = Vote.create(voter_id: params[:voter_id], candidate_id[:candidate_id])
+    v = Vote.create(voter_id: params[:voter_id], candidate_id: params[:candidate_id])
     render json: v
   end
 
@@ -11,6 +11,6 @@ class VotesController < ApplicationController
   end
 
   def index
-    render json: Votes.all
+    render json: Vote.all
   end
 end

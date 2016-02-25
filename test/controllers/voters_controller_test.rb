@@ -2,10 +2,10 @@ require 'test_helper'
 
 class VotersControllerTest < ActionController::TestCase
   test "should get create" do
-    # asset_difference("Voter.count") do
+    number_of_voters = Voter.count
     get :create
     assert_response :success
-    # end
+    assert_equal number_of_voters + 1, Voter.count
   end
 
   test "should get show" do
